@@ -12,7 +12,7 @@ const eventsArray = [
 const EventsContainer = function() {
   return (
     <div>
-      <h1>Events</h1>
+      <h1>Events (Holla)</h1>
 
       <Link to='/about'>Read about and Rate this app!</Link>
 
