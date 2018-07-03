@@ -1,0 +1,33 @@
+{
+  "name": "Registration Front-end",
+  "version": "0.0.1",
+  "description": "Attempt to build a front-end in React that talks to a ColdFusion backend",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack && node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "jsx-loader": "^0.13.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^4.1.1",
+    "react-router-dom": "^4.2.2",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "webpack-cli": "^2.0.12"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/starter-react-redux"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
