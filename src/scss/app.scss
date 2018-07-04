@@ -1,0 +1,9 @@
+@import 'global';
+
+h1 {
+    color: $main_blue;
+}
+
+main h1 {
+    border-bottom: 1px solid $dark_blue;
+}

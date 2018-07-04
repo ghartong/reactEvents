@@ -1,19 +1,24 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
-import Home from './home'
-import About from './about'
-import Events from './events'
-import Event from './event'
+import Home from './home/home-index'
+import About from './about/about-index'
+import Events from './events/events-index'
+import Event from './event/event-index'
+import '../scss/app.scss'
 
 const App = () => (
-  <div>
-    <header>
-      <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
-      <Link to="/events">Event List</Link>
+  <div className="col-md-12">
+    <header className="navbar navbar-default">
+      <div className="container-fluid">
+        <ul className="nav nav-pills">
+          <li role="presentation" className="active"><Link to="/">Home</Link></li>
+          <li role="presentation"><Link to="/about-us">About</Link></li>
+          <li role="presentation"><Link to="/events">Event List</Link></li>
+        </ul>
+      </div>
     </header>
 
-    <main>
+    <main className="col-md-11 col-md-offset-1">
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
       <Route exact path="/events" component={Events} />

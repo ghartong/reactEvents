@@ -1,0 +1,12 @@
+@import '../../scss/global';
+
+.event-list{
+
+    .eventListItem{
+        border-bottom: 1px solid $dark_red;
+        padding: 15px 25px;
+        h2 {
+            color: $main_red;
+        }
+    }
+}

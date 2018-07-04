@@ -5,6 +5,7 @@ import {
     getEvents
 } from '../../modules/event'
 import EventListItem from '../../components/event-list-item'
+import './events.scss'
 
 class Events extends React.Component {
     componentDidMount() {
@@ -33,8 +34,7 @@ class Events extends React.Component {
         
                 <button onClick={this.getEvents}>Load Events</button>
 
-                <hr />
-                <div id="event-list">
+                <div className="event-list">
                     {eventList.map(event => {
                         return <EventListItem e_id={event.id} e_title={event.eventTitle} e_date={event.eventDate} handleEventClick={this.handleEventClick} key={event.id} />
                     })}
