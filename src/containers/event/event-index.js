@@ -1,9 +1,8 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import {
-    loadEvent
-} from '../../modules/event'
+import { loadEvent } from '../../modules/event'
+import './event.scss'
 
 class Events extends React.Component {
     componentDidMount() {
@@ -23,9 +22,8 @@ class Events extends React.Component {
         return(
             <div>
                 <h1>Event</h1>
-                <hr />
                 { event.id ?
-                    <div id="event">
+                    <div className="event">
                         <h2>{event.eventTitle}</h2>
                         <p>{event.eventDate}</p>
                         <span className="eventId">{event.id}</span>
