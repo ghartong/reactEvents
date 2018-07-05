@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const EventListItem = props => (
-  <div>
-    <h1>{props.e_title}</h1>
+  <div className="eventListItem">
+    <h2>{props.e_title}</h2>
     <p>{props.e_date}</p>
-    <button onClick={() => props.handleEventClick(props.e_id)}>view details</button>
+    <button className="btn btn-primary" onClick={() => props.handleEventClick(props.e_id)}>view details</button>
   </div>
 )
 
