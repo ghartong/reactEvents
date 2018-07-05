@@ -8,6 +8,12 @@ import {
   decrement,
   decrementAsync
 } from '../../modules/counter'
+import styled from 'styled-components'
+
+const ButtonStyled = styled.button`
+  background: ${props => props.color ? props.color : 'white'};
+  color: ${props => props.primary ? 'white' : 'blue'};
+`
 
 const Home = props => (
   <div>
@@ -15,16 +21,16 @@ const Home = props => (
     <p>Count: {props.count}</p>
 
     <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>Increment</button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</button>
+      <ButtonStyled color='blue' primary onClick={props.increment} disabled={props.isIncrementing}>Increment</ButtonStyled>
+      <ButtonStyled onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</ButtonStyled>
     </p>
 
     <p>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</button>
+      <ButtonStyled color='red' primary onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</ButtonStyled>
+      <ButtonStyled onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</ButtonStyled>
     </p>
 
-    <p><button onClick={() => props.changePage()}>Go to about page via redux</button></p>
+    <p><button className="btn btn-default" onClick={() => props.changePage()}>Go to about page via redux</button></p>
   </div>
 )
 

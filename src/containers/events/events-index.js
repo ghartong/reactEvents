@@ -6,6 +6,7 @@ import {
 } from '../../modules/event'
 import EventListItem from '../../components/event-list-item'
 import './events.scss'
+import styled from 'styled-components'
 
 class Events extends React.Component {
     componentDidMount() {
@@ -22,17 +23,25 @@ class Events extends React.Component {
 
         this.getEvents = this.props.getEvents.bind(this)
         this.handleEventClick = this.handleEventClick.bind(this)
+    
     }
+
+
+    ButtonStyled = styled.button`
+        background: ${props => props.color ? props.color : 'white'};
+        color: ${props => props.primary ? 'white' : 'blue'};
+    `
 
     render() {
         const eventList = this.props.eventList
+        const ButtonStyled = this.ButtonStyled
 
         return(
             <div>
                 <h1>Event List</h1>
                 <p>Count: {eventList.length}</p>
         
-                <button onClick={this.getEvents}>Load Events</button>
+                <ButtonStyled primary color='red' className='btn' onClick={this.getEvents}>Load Events</ButtonStyled>
 
                 <div className="event-list">
                     {eventList.map(event => {
